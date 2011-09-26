@@ -1,8 +1,8 @@
 package com.github.arschles.betteractors
 
-import java.util.concurrent.CountDownLatch
+import java.util.concurrent.{CountDownLatch, LinkedBlockingQueue}
 
-abstract class Operation[In, Out] {
+trait Operation[In, Out] {
 	def apply(in:In):Out
 }
 
@@ -10,7 +10,7 @@ sealed class Actor[In, Out](f:Operation[In, Out]) {
   import Actor._
 	import Strategies._
   import Future._
-	
+
 	/**
 	* equivalent to send(a, 0)
 	*/

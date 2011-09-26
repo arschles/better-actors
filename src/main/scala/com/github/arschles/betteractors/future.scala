@@ -13,6 +13,11 @@ sealed class Future[T](fn: => T)(implicit val strategy:Strategy) {
 		lazy val newOperation:Future[U] = fn(get)
     newOperation
 	}
+
+  def |||[U](fn:T => U):Future[U] = {
+    lazy val newOperation:U = fn(get)
+    future(newOperation)
+  }
 }
 
 object Future {
