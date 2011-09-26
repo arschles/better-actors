@@ -10,8 +10,7 @@ Most of the inspiration for this was taken from Scalaz, specifically
 [here](http://www.slideshare.net/bostonscala/beyond-mere-actors) and
 [here](https://github.com/scalaz/scalaz/blob/master/core/src/main/scala/scalaz/concurrent/Promise.scala).
 
-This code has a long way to go, so don't rely on it in production. or actually at all right now. I have 1-3 done, but
-4 is still in progress.
+This code has a long way to go, so don't rely on it in production. or actually at all right now.
 
 
 # How
@@ -39,6 +38,5 @@ println(nextFuture) //"23 as a string"
 ```
 
 # Todo
-1. accomplish #4 above in the "What" section
-2. write tests
-3. goto 2
+1. write tests
+2. goto 1
