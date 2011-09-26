@@ -1,18 +1,17 @@
 package com.github.arschles.betteractors
 
-import java.util.concurrent.{Executors, Future => JFuture, Callable}
-
 sealed class Future[T](fn: => T)(implicit val strategy:Strategy) {
+  import Future._
+  import Strategies._
+
 	private val getResult = strategy(fn)
 	
-	def get:getResult
+	def get:T = getResult.apply()
 	
 	//compose this future with a function
-	def |||[U](fn:T => U):Future[U] = {
-		lazy val newOperation = fn(get)
-		import Strategies._
-		implicit val strategy = if(done) { new Sequential } else { new ExecutorService }
-		new Future(newOperation)
+	def |||[U](fn:T => Future[U]):Future[U] = {
+		lazy val newOperation:Future[U] = fn(get)
+    newOperation
 	}
 }
 
@@ -21,7 +20,7 @@ object Future {
 		def future:Future[T] = new Future(a)
 	}
 	
-	implicit def lazyValToFuturePimp(f: => T)(implicit strategy:Strategy) = new FuturePimp(f)
+	implicit def lazyValToFuturePimp[T](f: => T)(implicit strategy:Strategy):FuturePimp[T] = new FuturePimp(f)
 	
-	def future(f: => T, implicit val strategy:Strategy) = new Future(f)
+	def future[T](f: => T)(implicit strategy:Strategy):Future[T] = new Future(f)
 }
