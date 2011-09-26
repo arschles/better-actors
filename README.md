@@ -4,7 +4,7 @@ This is my attempt to build actors in Scala that have everything that I want the
 1. type safety
 2. all operations return a future
 3. delayed execution
-4. easily managed complex shared state
+4. ability to easily manage complex shared state
 
 Most of the inspiration for this was taken from Scalaz, specifically
 [here](http://www.slideshare.net/bostonscala/beyond-mere-actors) and
