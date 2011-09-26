@@ -8,16 +8,14 @@ trait Operation[In, Out] {
 
   //return a new operation that represents the result of passing the result of this operation
   //to the new operation
-  def andThen[Out, Out2](nextOp:Operation[Out, Out2]):Operation[In, Out2] = {
+  def andThen[Out2](nextOp:Operation[Out, Out2]):Operation[In, Out2] = {
     val firstOp = this
     new Operation[In, Out2] {
-      override def apply(in:In) = {
-        nextOp.apply(firstOp(in))
-      }
+      override def apply(in:In):Out2 = nextOp(firstOp(in))
     }
   }
 
-  def |||[Out, Out2](nextOp:Operation[Out, Out2]):Operation[In, Out2] = andThen(nextOp)
+  def |||[Out2](nextOp:Operation[Out, Out2]):Operation[In, Out2] = andThen(nextOp)
 }
 
 sealed class Actor[In, Out](f:Operation[In, Out]) {
