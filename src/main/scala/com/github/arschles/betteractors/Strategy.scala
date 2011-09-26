@@ -23,13 +23,13 @@ object Strategies {
   implicit val scheduledExecutorService:JScheduledExecutorService = Executors.newScheduledThreadPool(numThreadsInScheduledThreadPool)
 
 	class Synchronous extends Strategy {
-		override def apply[T](a: => T) = {
+		override def apply[T](a: => T):() => T = {
 			() => a
 		}
 	}
 
 	class ExecutorService(implicit executorService:JExecutorService) extends Strategy {
-		override def apply[T](a: => T) = {
+		override def apply[T](a: => T):() => T = {
       lazy val callable:Callable[T] = a
 			val future = executorService.submit(callable)
 			() => future.get
@@ -38,7 +38,7 @@ object Strategies {
 	
 	class Delayed(delayMS:Long)(implicit scheduledExecutorService:ScheduledExecutorService) extends Strategy {
 
-		override def apply[T](a: => T) = {
+		override def apply[T](a: => T):() => T = {
       lazy val callable:Callable[T] = a
       val future = scheduledExecutorService.schedule(callable, delayMS, TimeUnit.MILLISECONDS)
       () => future.get
