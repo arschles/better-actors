@@ -62,16 +62,19 @@
       <file leaf-file-name="Actor.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Actor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="25" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0375">
+            <state line="43" column="9" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.8290489">
               <folding />
             </state>
           </provider>
@@ -80,16 +83,7 @@
       <file leaf-file-name="Future.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Future.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="3" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Strategy.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Strategy.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="35" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
+            <state line="19" column="3" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,13 +99,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Future.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Strategy.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Actor.scala" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Actor.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Future.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -500,16 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="96" selection-start="524" selection-end="524" vertical-scroll-proportion="0.19280206">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="38" selection-start="643" selection-end="643" vertical-scroll-proportion="0.3">
@@ -524,23 +508,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Future.scala">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="3" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+        <state line="2" column="4" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Actor.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="25" selection-start="1431" selection-end="1431" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/github/arschles/betteractors/Future.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0375">
+        <state line="19" column="3" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="9" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.8290489">
           <folding />
         </state>
       </provider>
